@@ -65,8 +65,8 @@
 
 # Name	      Technical Term	       Example	   What it is
 # Text	       str (String)	           "Paris"	   Anything inside quotes.
-# Whole Number   int (Integer)	        56	       Numbers without decimals.
-# Decimal	       float (Floating Point)	5.5	       Numbers with a decimal point.
+# Whole Number int (Integer)	        56	       Numbers without decimals.
+# Decimal	   float (Floating Point)	5.5	       Numbers with a decimal point.
 # Logic	       bool (Boolean)	       True	Only two values: True or False.
 
 ##🔢 Step 2: Basic Math & F-Strings

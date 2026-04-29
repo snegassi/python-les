@@ -118,7 +118,6 @@
 # Let's look at how a professional would write a "price grader" using these operators. 
 # Copy this into a new file called logic_test.py:
 
-# Python
 # price = 80
 # on_sale = True
 
@@ -166,10 +165,8 @@
 ##There are two main types of loops. Let's start with the most common one: the for loop.
 
 ##---- 📐 The "Range" Loop
-# In VS Code, try this. It tells Python to count from 0 up to (but not including) 5.
-
-# Python
-# # The 'i' stands for 'item' or 'index' (it's just a variable name)
+## In VS Code, try this. It tells Python to count from 0 up to (but not including) 5.
+## The 'i' stands for 'item' or 'index' (it's just a variable name)
 # for i in range(5):
 #     print(f"This is loop number: {i}")
 
