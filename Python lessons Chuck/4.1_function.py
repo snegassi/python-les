@@ -54,22 +54,96 @@ While your logic is sound, it's cleaner to put your inputs after the function de
 Variable Scope: It is usually better to convert the strings to float() before sending them into the function. 
 This keeps the function focused only on the math (computepay), not on data conversion. Just as the below
 """
-def computepay(h, r):
-    if h <= 40:
-        total_pay = h * r
-    else:
-        normal_pay = 40 * r
-        overtime_pay = (h - 40) * (r * 1.5)
-        total_pay = normal_pay + overtime_pay
+"""
+# def computepay(h, r):
+#     if h <= 40:
+#         total_pay = h * r
+#     else:
+#         normal_pay = 40 * r
+#         overtime_pay = (h - 40) * (r * 1.5)
+#         total_pay = normal_pay + overtime_pay
     
-    return total_pay
+#     return total_pay
 
-# Get inputs and convert to float
-hrs = input("Enter Hours: ")
-rate = input("Enter Rate: ")
-fh = float(hrs)
-fr = float(rate)
+# # Get inputs and convert to float
+# hrs = input("Enter Hours: ")
+# rate = input("Enter Rate: ")
+# fh = float(hrs)
+# fr = float(rate)
 
-# Call the function and print the returned value
-p = computepay(fh, fr)
-print("Pay", p)
+# # Call the function and print the returned value
+# p = computepay(fh, fr)
+# print("Pay", p)
+
+#-----------------------------------------------"""
+
+### More Better explanation about the question with the best use of "print" vs "return"
+
+# hours = input ("Number of hours ?: ")
+# rates = input ("what is the rate per hour ?:")
+
+# try:
+#     h = float (hours)
+# except:
+#     h = "hours are not numbers"
+
+# print(h) # this can be printed
+
+# try:
+#     r = float (rates)
+# except:
+#     r = "rates are not numbers"
+
+# print(r)  # this can be printed, 
+# but to use the h and r in the function and actually use the function, the function has to be called by it's name and with its parameters. 
+# And the order of puting the numbers matter as well 1st h and 2nd r. 
+
+# def computepay(h,r):
+#     if h > 40:
+#         ext_h = h - 40
+#         nor_pay = 40 * r
+#         ext_pay = ext_h * (1.5 * r)
+#         total = nor_pay + ext_pay
+#         print("Pay", total)
+
+#     else:
+#         total = h * r
+#         print("Pay", total)
+
+# computepay(h, r) # this will print the result as it is. 
+# but if we use return the result is going to be there but it will require the function to be assined to a given variable and then have the variable be printed to see the result 
+# as return is mostly used to return the value back to the programme/code to be used rather than being shown in the terminal. See below the changes.
+
+hours = input ("Number of hours ?: ")
+rates = input ("what is the rate per hour ?:")
+
+try:
+    h = float (hours)
+except:
+    h = "hours are not numbers"
+
+print(h) # this can be printed
+
+try:
+    r = float (rates)
+except:
+    r = "rates are not numbers"
+
+print(r)  # this can be printed, 
+# but to use the h and r in the function and actually use the function, the function has to be called by it's name and with its parameters. 
+# And the order of puting the numbers matter as well 1st h and 2nd r. 
+
+def computepay(h,r):
+    if h > 40:
+        ext_h = h - 40
+        nor_pay = 40 * r
+        ext_pay = ext_h * (1.5 * r)
+        total = nor_pay + ext_pay
+        return (total) # got to remove "Pay", part as it will be return exactly with its double quots and comma, hence add it at the last print with the variable
+
+    else:
+        total = h * r
+        return (total)
+
+result = computepay(h, r)
+print("Pay", result)

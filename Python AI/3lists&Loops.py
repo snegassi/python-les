@@ -118,9 +118,9 @@
 # # For loop is Worker
 # for status in logs:   # "status" indicated Single item of the list at a time
 #     if status == "Failed":
-#         print("⚠️ Security Warning: Failed Login Detected!") # It prints one at a time for each Statues failed it finds, since its in a loop
+#         print("⚠️ Security Warning: Failed Login Detected!") # Since the Print is Inside the For-loop. It prints one at a time for each Statues failed it finds, since its in a loop
 #     else:
-#         print("Login OK.")  # It prints one at a time for each Statues Success it finds, since its in a loop
+#         print("Login OK.")  #Since the Print is Inside the For-loop. It prints one at a time for each Statues Success it finds, since its in a loop
 
 # Result = Login OK.
 #          ⚠️ Security Warning: Failed Login Detected!
@@ -147,10 +147,11 @@
 # for s in sales:
 #     # Add the current sale to our running total
 #     total_money = total_money + s
-#     print(f"Added {s}. Current total is: {total_money}") # It prints one at a time for each s it finds
+#     print(f"Added {s}. Current total is: {total_money}") #Since THE Print is Inside the for-loop. It prints one at a time for each s it finds
 
 # # --- Outside the loop-THE RESULT ---
-# print(f"--- FINAL SALES TOTAL: ${total_money} ---")
+# print(f"--- FINAL SALES TOTAL: ${total_money} ---")### Since the print is Outside the for- loop/ If. It prints the Final Result of total_money in the End Once.
+
 
 # Result = Added 10. Current total is: 10
 #          Added 50. Current total is: 60
@@ -181,11 +182,11 @@
 
 # for code in status_codes:
 #     if code != 200: # != means "Not Equal to"
-#         print(f"Found an error: {code}") # It prints one at a time for each error it finds, since its in a loop
+#         print(f"Found an error: {code}") ### Since THE Print is Inside the For-loop. It prints one at a time for each error it finds, since its in a loop
 #         error_count = error_count + 1 # Adding One error at a time
 
 # # Outside the loop- PRINTING FOR TOTAL ERRORS
-# print(f"Total Errors Found: {error_count}")
+# print(f"Total Errors Found: {error_count}") ### Since the print is Outside the for- loop/ If. It prints the Final Result of errors in the End Once.
 
 # Result = Found an error: 404
 #          Found an error: 500
@@ -247,10 +248,10 @@
 
 # for time in response_times:
 #     if time > 500:
-#         print (f"⚠️ Warning: {time}ms is too slow!") # It prints one at a time for each Time it finds, since its in a loop
+#         print (f"⚠️ Warning: {time}ms is too slow!") #Since THE Print is Inside the For-loop. It prints one at a time for each Time it finds.
 #         slow_count += 1
 
-# print(f"The total count of slow response = {slow_count}")
+# print(f"The total count of slow response = {slow_count}")# Since the print is Outside the for- loop/ If. It prints the Final Result of slow_count in the End Once.
 
 # Result = ⚠️ Warning: 550ms is too slow!
 #          ⚠️ Warning: 800ms is too slow!
@@ -333,12 +334,12 @@
 
 # for size in folder_sizes:
 #     if size > 100:
-#         print(f"⚠️ Found huge folder: {size}GB") # It prints one at a time for each Size it finds, Since it's in a loop
+#         print(f"⚠️ Found huge folder: {size}GB") ## Since THE Print is Inside the For-loop. It prints one at a time for each Size it finds.
 #         oversized_count += 1 # (counting 1 at a time to know how many folders are oversized)
 #         total_oversized_gb += size # (adding the total gb of over BY SIZE one at a time)
 
-# print(f"{oversized_count=}")
-# print(f"{total_oversized_gb=}GB")
+# print(f"{oversized_count=}") ## Since the print is Outside the for- loop/ If. It prints the Final Result of oversized_count in the End Once.
+# print(f"{total_oversized_gb=}GB")## Since the print is Outside the for- loop/ If. It prints the Final Result of total_oversized_gb in the End Once.
 
 # Results =  ⚠️ Found huge folder: 150GB
 #            ⚠️ Found huge folder: 300GB
